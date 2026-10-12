@@ -16,7 +16,9 @@ mrstModule add ad-core ad-blackoil ad-props
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 
 run(fullfile(projectRoot, ...
-    '01_Baseline', 'fluid_model_02.m'));
+    '01_Baseline', 'fluid_model_03.m'));
+
+close all;   % fluid_model_03.m opens plot windows
 
 fprintf('\n');
 fprintf('====================================================\n');

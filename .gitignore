@@ -1,1 +1,4 @@
 MRST-2026a/ 
+
+# Exclude simulation cache files
+06_results/mrst_cache/

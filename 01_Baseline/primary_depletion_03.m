@@ -9,7 +9,12 @@ mrstModule add ad-core ad-blackoil ad-props
 
 %% 1. Load Reservoir and Fluid Model
 
-run('fluid_model_02.m');
+projectRoot  = 'D:\PROJECT';
+baselineFile = fullfile(projectRoot, '01_Baseline', 'fluid_model_03.m');
+if ~isfile(baselineFile), error('Baseline file not found:\n%s', baselineFile); end
+run(baselineFile);
+
+close all;   % fluid_model_03.m opens plot windows
 
 %% 2. Producer Location
 
@@ -56,8 +61,9 @@ bhp = zeros(nSteps,1);
 
 for k = 1:nSteps
 
+    % elapsed time (schedule.step.val holds step LENGTHS, so accumulate them)
     time_years(k) = ...
-        convertTo(schedule.step.val(k), year);
+        convertTo(sum(schedule.step.val(1:k)), year);
 
     oilRate(k) = ...
         -convertTo(wellSols{k}(1).qOs, meter^3/day);
@@ -75,15 +81,9 @@ end
 dt_days = convertTo(schedule.step.val, day);
 dt_days = dt_days(:);
 
-cumOil = zeros(nSteps,1);
-
-for k = 2:nSteps
-
-    cumOil(k) = cumOil(k-1) + ...
-        0.5 * (oilRate(k) + oilRate(k-1)) * ...
-        (dt_days(k) - dt_days(k-1));
-
-end
+% end-of-step rate x step length (consistent with the implicit solver;
+% same convention as the v03 sensitivity script)
+cumOil = cumsum(oilRate .* dt_days);
 
 %% 7. OOIP
 

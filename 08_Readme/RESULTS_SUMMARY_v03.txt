@@ -1,0 +1,38 @@
+CAIRN-RAJASTHAN INSPIRED POLYMER FLOOD - RESULTS SUMMARY (v03 model)
+Generated: 2026-10-13 01:51
+
+MODEL
+  Pore volume            : 9.5909e+05 m3
+  OOIP                   : 719320 m3
+  Simulation length      : 3650 days (10.0 years)
+  Polymer cases (kg/m3)  : [0 1]
+
+RESERVOIR PERFORMANCE
+  0.00 kg/m3 : cum oil    238395 m3 | RF 33.14 % | final water cut  89.5 % | max inj. BHP  269.7 bar
+  1.00 kg/m3 : cum oil    323801 m3 | RF 45.01 % | final water cut  85.4 % | max inj. BHP  302.4 bar
+
+BEST POLYMER CASE (highest incremental NPV): 1.00 kg/m3
+  Waterflood RF          : 33.14 %
+  Polymer RF             : 45.01 %
+  Incremental oil        : 85406 m3 (537 kbbl, +11.87 RF points)
+  Polymer injected       : 730 t | PUF 1.36 kg per incremental bbl
+  Incremental NPV        : 8.87 MUSD (discount 10 %)
+  Incremental IRR        : 93.4 %
+  Payback                : 1.60 years
+  Break-even oil price   : 25.9 USD/bbl (base case 70 USD/bbl)
+
+ASSUMPTIONS / LIMITATIONS
+  - No polymer adsorption (ads = 0)
+  - No inaccessible pore volume (dps = 0)
+  - No residual resistance factor (rrf = 1)
+  - Linear viscosity law: muWMult = 1 + 4*c/cpmax
+  - No shear thinning, degradation, salinity or temperature effects
+  - No injector BHP limit (fracture pressure not enforced)
+  - Economic inputs are placeholders - replace with project values
+  - Results are optimistic screening estimates, not forecasts
+
+OUTPUT FILES
+  06_results\polymer_concentration_sensitivity_v03.mat / .csv
+  06_results\polymer_economics_v03.mat / .csv
+  06_results\FINAL_RESULTS_v03.xlsx
+  07_Figures\v03\ (sensitivity 17-36, economics 40-45, dashboard 50)

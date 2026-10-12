@@ -1,0 +1,42 @@
+REPORT FIGURES (v03)  -  folder: D:\PROJECT\07_Figures\v03\report
+
+R01_Permeability_Layers.png
+    Horizontal permeability (log10 mD) of the three layers with well positions (triangles = injectors, circle = producer).
+
+R02_Rock_Distributions.png
+    Histograms of porosity and of horizontal permeability for each layer.
+
+R03_RelPerm_FractionalFlow.png
+    Corey relative permeability curves and the fractional-flow curves obtained for each polymer concentration (linear viscosity law).
+
+R04_Well_Pattern.png
+    5-spot well pattern: four corner injectors (50 m3/day each) and a central BHP-controlled producer, over the layer-1 permeability map.
+
+R05_Production_History.png
+    Oil rate, water cut, cumulative oil and average reservoir pressure for the waterflood control and each polymer concentration.
+
+R06_Recovery_vs_PVI.png
+    Recovery factor against pore volumes of water injected - the clearest like-for-like comparison of polymer and waterflood.
+
+R07_Injector_BHP.png
+    Maximum injector bottom-hole pressure over time (no BHP limit is imposed in the model).
+
+R08_Final_Sw_Maps.png
+    Final water saturation by layer: waterflood (top row) vs polymer flood (bottom row), same colour scale.
+
+R09_Final_Polymer_Concentration.png
+    Final polymer concentration by layer for the best polymer case: shows how far the polymer bank has swept each layer.
+
+R10_Final_Pressure_Maps.png
+    Final pressure by layer for the waterflood and the best polymer case, same colour scale.
+
+R11_Oil_Saturation_Gain.png
+    Difference in final oil saturation (waterflood minus polymer). Red = oil recovered thanks to polymer.
+
+R12_Polymer_Mass_Balance.png
+    Polymer injected, stored and produced (tonnes) and the closure error of the balance.
+
+R13_Summary_vs_Concentration.png
+    Recovery factor, incremental oil, final water cut and maximum injector BHP against polymer concentration.
+
+Economics figures (40-45) and the dashboard (50) are in 07_Figures\v03.
