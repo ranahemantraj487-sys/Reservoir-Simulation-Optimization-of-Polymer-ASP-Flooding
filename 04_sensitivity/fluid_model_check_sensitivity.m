@@ -1,23 +1,7 @@
 %% polymer_concentration_sensitivity_03.m
 % Cairn-Rajasthan inspired polymer flood - polymer concentration sensitivity (v03)
 %
-% CHANGES vs polymer_concentration_sensitivity_FIXED.m
-%  1. Uses fluid_model_03.m (relperm end-points, layered perm, 400 m pattern).
-%  2. Initial state and pressure are taken from the baseline file (no hard-coded
-%     0.25/0.75/250 bar). OOIP check is optional (expectedOOIP = NaN skips it).
-%  3. A 0 kg/m3 WATERFLOOD CONTROL is included -> incremental oil vs control and
-%     polymer utilization factor (PUF) are reported.
-%  4. Simulation length is a setting (nYears) and the time-step scheme scales with it.
-%     runMode = 'quick' runs only [0 1.00] for a fast check of the horizon.
-%  5. The 1.00 kg/m3 "reference check" (valid only for the old model) is removed.
-%  6. Optional tighter solver tolerances (tightTol) to test the polymer balance error.
-%  7. Results are saved after every case (partial file) and to *_v03 files, so old
-%     results are not overwritten. Figures go to 07_Figures\v03.
-%  8. Diagnostic lines that sat after the local functions are removed
-%     (use polymer_postcheck.m instead).
-%
-% SAVE AS: D:\PROJECT\04_sensitivity\polymer_concentration_sensitivity_03.m
-% (UNTESTED against your MRST version - try runMode = 'quick' first.)
+
 
 clearvars; close all; clc;
 
